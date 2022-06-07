@@ -264,7 +264,7 @@ label h3 {
 .sidebar-price i{
     font-size: 13px;
 }
-.sidebar-price button>a{
+.sidebar-price a{
     text-decoration: none;
     color: #fff;
 }
