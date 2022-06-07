@@ -8,6 +8,7 @@ html{
 body{
     margin: 0;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 :root{
     --main-color: #1dbf73;
@@ -314,6 +315,11 @@ label h3 {
 }
 
 /* ! RESPONSIVE PART */
+@media (max-width: 1024.5px) {
+    nav{
+        width: 95%;
+    }
+}
 @media (max-width: 768.5px) {
     .sidebar{
         display: none;
