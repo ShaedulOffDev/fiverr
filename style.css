@@ -1,0 +1,348 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    list-style: none;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+:root{
+    --main-color: #1dbf73;
+    --grey: #c5c6c9;
+}
+.stick{
+    width: 100%;
+    height: 1px;
+    background: var(--grey);
+}
+.dot{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin: 0 5px 5px 5px;
+    background: #000;
+}
+/* ! Header page */
+header{
+    box-shadow: 0 0 2px rgba(0,0,0,.4);
+    width: 100%;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    padding: 25px 0;
+}
+.nav-menu{
+    display: flex;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+.nav-menu li{
+    display: flex;
+    font-weight: bold;
+    margin: 0 10px;
+    align-items: center;
+    color: var(--grey);
+}
+.nav-menu i{
+    color: var(--grey);
+}
+.nav-menu span{
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+}
+.nav-menu .active{
+    color: var(--main-color);
+}
+.nav-menu .active > span{
+    background: var(--main-color);
+}
+
+/* ! Main page */
+main{
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.main-page{
+    min-width: 60%;
+    padding: 30px;
+}
+/* * Card */
+.card{
+    display: flex;
+    margin-bottom: 20px;
+}
+.card-image img{
+    width: 150px;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 150px);
+    padding: 10px;
+}
+.card-info__title h3{
+    margin: 0;
+    padding: 0;
+}
+.card-info__title a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+.rate{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.rate i{
+    color: #ffbf00;
+}
+.rate span:last-child{
+    color: var(--grey);
+}
+.cost{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.cost span:last-child{
+    font-weight: bold;
+}
+.cost select{
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+.cost select:focus{
+    outline: 0;
+}
+.extras-menu{
+    margin: 0;
+    padding: 0;
+}
+.extras-menu li{
+    padding: 25px 15px;
+    transition: .1s;
+}
+.extras-menu li:hover{
+    background: #fafafa;
+    box-shadow: 0 0 1px #222;
+}
+.extras-menu__item{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+label{
+    display: flex;
+    cursor: pointer;
+}
+label h3 {
+    margin: 0;
+    color: #333;
+}
+.extras{
+    padding-top: 30px;
+}
+.extras > h2{
+    color: #333;
+    margin-left: 20px;
+}
+.extras-menu__item-title h3 span{
+    font-size: 18px;
+    font-weight: normal;
+}
+.extras-menu__item-title p{
+    max-width: 90%;
+    font-size: 15px;
+    color: #7a7d85;
+    margin-top: 10px;
+}
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkmark {
+    border: 1px solid rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+}
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #62646a;
+    border: none;
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* ? Sidebar */
+.sidebar{
+    min-width: 400px;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+.sticky{
+    position: sticky;
+    top: 80px;
+    width: 400px;
+    text-align: center;
+    height: 400px;
+}
+.sidebar-price{
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0 0 1px #222;
+    padding: 15px;
+}
+.sidebar-price h3{
+    margin: 5px 0 0 0;
+    color: #222;
+}
+.sidebar-price p{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #62646a;
+    padding: 5px 0;   
+}
+.sidebar-price i{
+    font-size: 13px;
+}
+.sidebar-price .active{
+    font-weight: bold;
+}
+.sidebar-price button{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #Fff;
+}
+.sidebar-price > p:last-child{
+    color: #62646a;
+    font-size: 14px;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+
+}
+.sidebar-pay{
+    display: inline-block;
+    background: url(//assetsv2.fiverrcdn.com/assets/v2_globals/icn-payments-logos-sprite-50902dd393e9c1b8036cd37d8fa3c637.svg) center -25px no-repeat;
+    background-size: 100%;
+    width: 300px;
+    margin: 10px auto;
+    height: 50px;
+    overflow: hidden;
+}
+.sidebar-text{
+    width: 300px;
+    margin: 0 auto;
+    font-size: 13px;
+    color: #62646a;
+}
+.sidebar-text span{
+    text-transform: uppercase;
+}
+.sidebar-text p{
+    margin: 5px 0 0 0;
+}
+
+/* ! RESPONSIVE PART */
+@media (max-width: 768.5px) {
+    .sidebar{
+        display: none;
+    }
+    .nav-menu{
+        display: none;
+    }
+}
+@media (max-width: 425.5px) {
+    .card{
+        flex-direction: column;
+    }
+    .card-image img{
+        width: auto
+    }
+    .card-image{
+        text-align: center;
+        width: 100%;
+    }
+    .card-info .cost{
+        margin-top: 20px;
+    }
+    .card-info{
+        width: 100%;
+        flex-direction: column;
+    }
+    .cost{
+        width: 150px;   
+    }
+    .main-page{
+        padding: 5px;
+    }
+    .extras-menu__item{
+        flex-direction: column;
+    }
+}
